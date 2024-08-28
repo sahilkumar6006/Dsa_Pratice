@@ -94,6 +94,97 @@ public class Main {
         }
 
 
+        public void addFirst(int val) {
+            Node temp = new Node();
+            temp.data = val;
+            temp.next = head;
+            head = temp;
+
+            if(size == 0) {
+                tail = temp;
+            }
+
+            size++; 
+        }
+
+
+        public void addAT(int idx , int val) {
+            if(idx < 0 ||  idx > size  ) {
+                System.out.println("invalid arguments");
+
+            }else if( idx == 0) {
+                addFirst(val);
+
+            }else if(idx == size) {
+                addLast((val));
+            }else {
+                Node node = new Node();
+                node.data = val;
+                 
+                Node temp = head;
+                for(int i =0; i < idx -1; i++) {
+                    temp = temp.next;
+                    
+                }
+
+                node.next = temp.next;
+                temp.next = node; 
+
+                size++;
+            }
+        }
+
+
+
+        public void removeLast() {
+            if(size == 0) {
+                System.out.println("List is empty");
+            }else if(size == 1) {
+                head = tail = null;
+                size = 0;
+            }else {
+               Node temp = head;
+               
+               for(int i =0 ; i < size -2; i++) {
+                temp = temp.next;
+               }
+
+               tail = temp;
+               temp.next = null;
+               size--; 
+            }
+            
+        }
+
+        
+        private Node getNodeAt(int idx) {
+            Node temp = head;
+            for(int i =0; i < idx; i++) {
+                temp = temp.next;
+            }
+
+            return temp;
+        }
+
+        public void reverseDI() {
+            int li = 0;
+            int ri = size -1;
+
+            while (li < ri) {
+                Node left = getNodeAt((li));
+                Node right = getNodeAt((ri));
+
+                int temp = left.data;
+                left.data = right.data;
+                right.data = temp;
+
+                li++;
+                ri--;
+            }
+        }
+
+
+
     }
 
     public static void main(String[] args) {
@@ -112,6 +203,10 @@ public class Main {
         list.getFirst();
         list.getLast();
         list.getAt(1);
+        list.addFirst((100));
+        list.display();
+        list.reverseDI();
+        list.display();
     }
 
 }
