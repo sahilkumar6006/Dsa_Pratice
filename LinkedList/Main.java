@@ -229,7 +229,7 @@ public class Main {
     }
 
 
-    public static class LLToStackAdapter {
+    // public static class LLToStackAdapter {
         LinkedList<Integer> list;
     
         public LLToStackAdapter() {
