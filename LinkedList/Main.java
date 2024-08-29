@@ -185,7 +185,86 @@ public class Main {
 
 
 
+        public void reversPI() {
+            Node prev = null;
+            Node curr = head;
+
+            while (curr != null) {
+                Node next = curr.next;
+                curr.next = prev ;
+                prev = curr;
+                curr = next;
+                
+            }
+
+            Node temp = head;
+            head = tail;
+            tail = temp;
+        }
+
+
+        void removeAt(int idx){
+           if(idx < 0 || idx >= size){
+            System.out.println("invalid arguumen");
+           }else if( idx == 0) {
+            removeFirst();
+           }else if(idx == size()-1){
+              removeLast();
+          
+            }else {
+                Node temp = head;
+                for(int i =0; i< idx -1; i++) {
+                    temp = temp.next;
+                }
+
+                temp.next = temp.next.next;
+                size--;
+            }
+           
+        }
+
+
+       
+
     }
+
+
+    public static class LLToStackAdapter {
+        LinkedList<Integer> list;
+    
+        public LLToStackAdapter() {
+          list = new LinkedList<>();
+        }
+    
+        int size() {
+            return list.size();
+        }
+    
+        void push(int val) {
+            list.addFirst(val);
+        }
+    
+        int pop() {
+            if(list.size() == 0){
+                System.out.println("Stack underflow");
+                return -1;
+            }
+            
+            int val = list.removeFirst();
+            return val;
+        }
+    
+        int top() {
+            if(list.size() == 0){
+                System.out.println("Stack underflow");
+                return -1;
+            }
+            
+            int val = list.getFirst();
+            return val;        
+        }
+      }
+  
 
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
@@ -207,6 +286,11 @@ public class Main {
         list.display();
         list.reverseDI();
         list.display();
+        list.reversPI();
+        list.display();
+        list.removeAt(3);
     }
 
 }
+
+
