@@ -1,0 +1,72 @@
+import java.util.*;
+
+class MyQueue {
+    private int[] items;
+    private int front;
+    private int rear;
+    private int size;
+    private int count;
+    
+    public MyQueue(int capacity) {
+        this.items = new int[capacity];
+        this.front = 0;
+        this.rear = -1;
+        this.size = capacity;
+        this.count = 0;
+    }
+    
+    public void enqueue(int val) {
+        if (count == size) {
+            System.out.println("Queue is full");
+            return;
+        }
+        rear = (rear + 1) % size;
+        items[rear] = val;
+        count++;
+    }
+    
+    public int dequeue() {
+        if (count == 0) {
+            System.out.println("Queue is empty");
+            return -1;  // Indicating queue is empty
+        }
+        int val = items[front];
+        front = (front + 1) % size;
+        count--;
+        return val;
+    }
+    
+    public boolean isEmpty() {
+        return count == 0;
+    }
+    
+    public boolean isFull() {
+        return count == size;
+    }
+    
+    public String toString() {
+        return Arrays.toString(items);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyQueue queue = new MyQueue(5); 
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.enqueue(40);
+        queue.enqueue(50);
+        System.out.println(queue);
+        
+        System.out.println(queue.dequeue());  // Should print 10
+        System.out.println(queue.dequeue());  // Should print 20
+        
+        System.out.println(queue);
+        
+        queue.enqueue(60);  // Should succeed
+        System.out.println(queue);
+        
+        queue.enqueue(70);  // Should fail, queue is full
+    }
+}
