@@ -1,4 +1,3 @@
-import java.util.*;
 public class Main {
 
     // Node class representing each element in the LinkedList
