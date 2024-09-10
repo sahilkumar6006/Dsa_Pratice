@@ -1,0 +1,17 @@
+class Solution {
+    public ListNode middleNode(ListNode head) {
+        // Initialize two pointers: slow and fast
+        ListNode slow = head;
+        ListNode fast = head;
+
+        // Move fast by 2 steps and slow by 1 step
+        // When fast reaches the end, slow will be at the middle
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        // Slow will now be pointing to the middle node
+        return slow;
+    }
+}
