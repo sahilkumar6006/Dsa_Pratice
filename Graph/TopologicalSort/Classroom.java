@@ -52,6 +52,36 @@ public class Classroom {
         }
     }
 
+    public static boolean isCyclicUtil(ArrayList<Edge>[] graph, boolean vis[], int
+curr, int par) {
+vis[curr] = true;
+for(int i=0; i<graph[curr].size(); i++) {
+Edge e = graph[curr].get(i);
+//case1
+if(vis[e.dest] && e.dest != par) {
+
+boolean isCycle = isCyclicUtil(graph, vis, e.dest, curr);
+if(isCycle)
+return true;
+} else if(e.dest == par) {
+//case 2
+continue;
+} else {
+//case 3
+return true;
+}
+}
+return false;
+}
+//O(V+E)
+public static boolean isCyclic(ArrayList<Edge>[] graph, boolean vis[]) {
+for(int i=0; i<graph.length; i++) {
+if(isCyclicUtil(graph, vis, i, -1)) {
+return true;
+}
+}
+return false;
+}
     public static void main(String[] args) {
         int V = 7;  // Change to 7 to accommodate vertex 6
         ArrayList<Edge> graph[] = new ArrayList[V];
