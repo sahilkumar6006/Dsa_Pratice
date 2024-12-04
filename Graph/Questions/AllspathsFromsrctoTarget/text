@@ -1,0 +1,25 @@
+src = 0, target = 4
+//we need  to stop on the target node and print the path
+base case: if curr == target
+
+if curr == target
+    print stringpath
+    return
+
+for all neighbours of curr
+    if not visited[neighbour]
+        visited[neighbour] = true
+        stringpath = stringpath + neighbour
+        dfs(graph , visited[], neighbour, stringpath)   //recursive call
+
+
+        for(int i = 0; i < graph[curr].size(); i++){
+            Edge e = graph[curr].get(i);
+            if (!visited[e.dest]) {
+                visited[curr] = true;
+                stringpath = stringpath + e.dest;
+                dfs(graph , visited[], e.dest, stringpath);
+                visited[curr] = false;
+            }
+        }
+dfs(graph , visited[], curr, stringpath),
