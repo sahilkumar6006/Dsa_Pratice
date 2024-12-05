@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Classroom {
 
-    public static class Edge{  // Make this static
+    public static class Edge{ 
         int src;
         int dest;
 
@@ -15,10 +15,9 @@ public class Classroom {
 
     public static void createGraph(ArrayList<Edge> graph[]){
         for(int i = 0; i < graph.length; i++){
-            graph[i] = new ArrayList<>();  // Use generic type inference
+            graph[i] = new ArrayList<>();  
         }
-
-        graph[2].add(new Classroom.Edge(2, 3));  // Use fully qualified name
+        graph[2].add(new Classroom.Edge(2, 3)); 
         graph[3].add(new Classroom.Edge(3, 1));
         graph[4].add(new Classroom.Edge(4, 0));
         graph[4].add(new Classroom.Edge(4, 1));
