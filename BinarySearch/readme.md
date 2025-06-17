@@ -37,6 +37,101 @@ public int peakIndexInMountainArray(int[] arr) {
 ```
 
 ---
+## Ceiling of a Number in a Sorted Array
+
+> **Ceiling** of a number is the smallest element in a sorted array that is **greater than or equal to** the target value.
+
+---
+
+### 📌 Definition
+
+Given a sorted array `arr` and a target value `target`, the **ceiling** is the smallest `arr[i]` such that `arr[i] >= target`.  
+If no such element exists, return `-1`.
+
+---
+
+### 🧠 Example
+
+```text
+arr    = [2, 3, 5, 9, 14, 16, 18]
+target = 15
+
+Ceiling of 15 is 16
+Ceiling of 18 is 18
+Ceiling of 20 does not exist → return -1
+```
+
+---
+
+### ⚡ Approach: Binary Search
+
+Since the array is sorted, we can efficiently find the ceiling using binary search.
+
+#### Steps
+
+1. Initialize `start = 0`, `end = n - 1`
+2. While `start <= end`:
+    - Compute `mid = start + (end - start) / 2`
+    - If `arr[mid] == target`, return `arr[mid]` (perfect match)
+    - If `arr[mid] < target`, search right half (`start = mid + 1`)
+    - Else, search left half (`end = mid - 1`)
+3. After the loop, `start` points to the smallest number ≥ target
+4. If `start < arr.length`, return `arr[start]`; else, return `-1`
+
+---
+
+### 💻 Java Implementation
+
+```java
+public static int ceiling(int[] arr, int target) {
+    int start = 0;
+    int end = arr.length - 1;
+
+    while (start <= end) {
+        int mid = start + (end - start) / 2;
+
+        if (arr[mid] == target) {
+            return arr[mid]; // perfect match
+        }
+
+        if (arr[mid] < target) {
+            start = mid + 1; // go right
+        } else {
+            end = mid - 1; // go left
+        }
+    }
+
+    // start is now at the ceiling position
+    if (start < arr.length) {
+        return arr[start];
+    }
+    return -1; // ceiling doesn't exist
+}
+```
+
+---
+
+### 🔍 Dry Run
+
+Let's find the ceiling of `15` in `[2, 3, 5, 9, 14, 16, 18]`:
+
+| Step | start | end | mid | arr[mid] | Action                |
+| ---- | ----- | --- | --- | -------- | --------------------- |
+| 1    | 0     | 6   | 3   | 9        | arr[mid] < 15 → right |
+| 2    | 4     | 6   | 5   | 16       | arr[mid] > 15 → left  |
+| 3    | 4     | 4   | 4   | 14       | arr[mid] < 15 → right |
+
+- Loop ends, `start = 5`, so `arr[5] = 16` is the ceiling.
+
+---
+
+### 📝 Summary
+
+- Use binary search for efficiency.
+- Return `arr[start]` if `start < arr.length`.
+- If not found, return `-1`.
+
+---
 
 ## Rotated Sorted Array Search
 
