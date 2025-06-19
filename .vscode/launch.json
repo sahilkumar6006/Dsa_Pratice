@@ -1,0 +1,175 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "barchart",
+            "request": "launch",
+            "mainClass": "Array.BarChart.barchart",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Array.SingleNumber.Main",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "number",
+            "request": "launch",
+            "mainClass": "Array.SmallestNumberWhoseProductN.number",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "Classroom",
+            "request": "launch",
+            "mainClass": "BFs.Classroom",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "Disconnect",
+            "request": "launch",
+            "mainClass": "BFs.DisconnectedGraph.Disconnect",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "BST",
+            "request": "launch",
+            "mainClass": "BST",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "BasicBinaryTree",
+            "request": "launch",
+            "mainClass": "BasicBinaryTree",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "Classroom(1)",
+            "request": "launch",
+            "mainClass": "Classroom",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "Classroom(2)",
+            "request": "launch",
+            "mainClass": "DFS.Classroom",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "ClassRoom",
+            "request": "launch",
+            "mainClass": "Dijkstra.ClassRoom",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "Main(1)",
+            "request": "launch",
+            "mainClass": "Fibonacci.Main",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "InfinitArrayToFindTarget",
+            "request": "launch",
+            "mainClass": "InfinitArrayToFindTarget",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "Main(2)",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "Mountainarray",
+            "request": "launch",
+            "mainClass": "Mountainarray",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "Pattern",
+            "request": "launch",
+            "mainClass": "Pattern",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "Pattern2",
+            "request": "launch",
+            "mainClass": "Pattern2",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "RBS",
+            "request": "launch",
+            "mainClass": "RBS",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "Fixed_Size",
+            "request": "launch",
+            "mainClass": "SlidingWindow.Fixed_Size",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "Classroom(3)",
+            "request": "launch",
+            "mainClass": "TopologicalSort.Classroom",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "Inverse",
+            "request": "launch",
+            "mainClass": "normalBasic.Inverse",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "Occurrence",
+            "request": "launch",
+            "mainClass": "normalBasic.Occurrence",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
+            "name": "PrintNumber",
+            "request": "launch",
+            "mainClass": "normalBasic.PrintNumber",
+            "projectName": "Dsa_Pratice_427c503c"
+        }
+    ]
+}
