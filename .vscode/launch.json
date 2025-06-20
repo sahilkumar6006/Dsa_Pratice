@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Spiral",
+            "request": "launch",
+            "mainClass": "Array.SprialMatrix.Spiral",
+            "projectName": "Dsa_Pratice_427c503c"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
